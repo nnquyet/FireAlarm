@@ -1,0 +1,61 @@
+#include <main.h>
+
+void main()
+{
+   float DienAp, GiaTriADC;
+   float NhietDo;
+   
+   lcd_init();//khoi tao lcd
+   lcd_putc('\f');//xoa man hinh lcd
+   
+   setup_adc(ADC_CLOCK_INTERNAL); // Thiet lap adc
+   setup_adc_ports(AN0_AN1_VSS_VREF);
+   set_adc_channel(0);
+   
+   
+   while(TRUE)
+   {
+      //TODO: User Code
+      GiaTriADC = read_adc();
+      DienAp = (GiaTriADC*5)/1023.0f;// hay con goi la gia tri dien ap
+      /*
+         Ta co 10mV --> 1 do C
+         -->   xV  ---> ? do C
+         =====> ? = xV*1/10mv(0.01V)
+      */
+      NhietDo = DienAp *100.0f;// nhan 100 = chia 0.01V
+      
+      if(NhietDo < 50) {
+         lcd_gotoxy(1,1);
+         printf(lcd_putc,"AN TOAN");
+         
+         lcd_gotoxy(1,2);
+         printf(lcd_putc,"NHIETDO:%02.2f",NhietDo);
+         lcd_putc(223);// Ky tu do C
+         lcd_putc("C");
+         output_low(PIN_B1);
+         output_low(PIN_B2);
+      } else {
+         lcd_gotoxy(1,1);
+         printf(lcd_putc,"NGUY HIEM!!!");
+         delay_ms(500);
+         lcd_gotoxy(1,1);
+         printf(lcd_putc,"             ");
+         delay_ms(300);
+         
+         lcd_gotoxy(1,2);
+         printf(lcd_putc,"NHIETDO:%02.2f",NhietDo);
+         lcd_putc(223);// Ky tu do C
+         lcd_putc("C");
+         output_high(PIN_B1);
+         output_high(PIN_B2);
+         delay_ms(500);
+         output_low(PIN_B1);
+         output_low(PIN_B2);
+         delay_ms(300);
+      }
+   }
+
+}
+
+

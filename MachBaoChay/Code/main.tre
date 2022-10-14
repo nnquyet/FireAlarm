@@ -1,0 +1,84 @@
+ÀÄmain
+   ÀÄMAIN  0/299  Ram=16
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@cinit2  (Inline)  Ram=0
+      ÃÄlcd_init  0/58  Ram=2
+      ³  ÃÄ@delay_ms1  0/21  Ram=1
+      ³  ÃÄlcd_send_nibble  0/43  Ram=1
+      ³  ÃÄ@delay_ms1  0/21  Ram=1
+      ³  ÃÄlcd_send_nibble  0/43  Ram=1
+      ³  ÃÄ@const859  0/8  Ram=0
+      ³  ÀÄlcd_send_byte  0/87  Ram=3
+      ³     ÃÄlcd_read_byte  (Inline)  Ram=3
+      ³     ³  ÃÄlcd_read_nibble  0/49  Ram=2
+      ³     ³  ÀÄlcd_read_nibble  0/49  Ram=2
+      ³     ÃÄlcd_send_nibble  0/43  Ram=1
+      ³     ÀÄlcd_send_nibble  0/43  Ram=1
+      ÃÄlcd_putc  0/36  Ram=1
+      ³  ÃÄlcd_send_byte  0/87  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄ@delay_ms1  0/21  Ram=1
+      ³  ÃÄlcd_gotoxy  0/35  Ram=4
+      ³  ³  ÀÄlcd_send_byte  0/87  Ram=3
+      ³  ³     ÀÄ*
+      ³  ÃÄlcd_send_byte  0/87  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÀÄlcd_send_byte  0/87  Ram=3
+      ³     ÀÄ*
+      ÃÄ@ITOF  0/31  Ram=2
+      ÃÄ@MULFF  0/117  Ram=13
+      ÃÄ@DIVFF  0/204  Ram=14
+      ÃÄ@MULFF  0/117  Ram=13
+      ÃÄ@FLT  0/65  Ram=10
+      ÃÄlcd_gotoxy  0/35  Ram=4
+      ³  ÀÄ*
+      ÃÄ@PSTRINGC7_856  0/86  Ram=4
+      ³  ÃÄlcd_putc  0/36  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÀÄlcd_putc  0/36  Ram=1
+      ³     ÀÄ*
+      ÃÄlcd_gotoxy  0/35  Ram=4
+      ³  ÀÄ*
+      ÃÄ@PSTRINGCN7_856  0/87  Ram=5
+      ³  ÃÄlcd_putc  0/36  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÀÄlcd_putc  0/36  Ram=1
+      ³     ÀÄ*
+      ÃÄ@PRINTF_L32D_856FPFPF  0/224  Ram=13
+      ³  ÃÄ@MULFF  0/117  Ram=13
+      ³  ÃÄ@FTOSD  (Inline)  Ram=5
+      ³  ÃÄ@DIV3232  0/79  Ram=13
+      ³  ÃÄlcd_putc  0/36  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_putc  0/36  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_putc  0/36  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_putc  0/36  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÀÄ@DIV3232  0/79  Ram=13
+      ÃÄlcd_putc  0/36  Ram=1
+      ³  ÀÄ*
+      ÃÄ@PSTRINGC7_856  0/86  Ram=4
+      ³  ÀÄ*
+      ÃÄlcd_gotoxy  0/35  Ram=4
+      ³  ÀÄ*
+      ÃÄ@PSTRINGC7_856  0/86  Ram=4
+      ³  ÀÄ*
+      ÃÄ@delay_ms2  0/21  Ram=1
+      ÃÄlcd_gotoxy  0/35  Ram=4
+      ³  ÀÄ*
+      ÃÄ@PSTRINGC7_856  0/86  Ram=4
+      ³  ÀÄ*
+      ÃÄ@delay_ms2  0/21  Ram=1
+      ÃÄlcd_gotoxy  0/35  Ram=4
+      ³  ÀÄ*
+      ÃÄ@PSTRINGCN7_856  0/87  Ram=5
+      ³  ÀÄ*
+      ÃÄ@PRINTF_L32D_856FPFPF  0/224  Ram=13
+      ³  ÀÄ*
+      ÃÄlcd_putc  0/36  Ram=1
+      ³  ÀÄ*
+      ÃÄ@PSTRINGC7_856  0/86  Ram=4
+      ³  ÀÄ*
+      ÀÄ@delay_ms2  0/21  Ram=1
